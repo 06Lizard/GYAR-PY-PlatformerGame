@@ -2,9 +2,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3dcdb28f-9775-4a0a-ab16-d2bf9d11e3fb</ProjectGuid>
+    <ProjectGuid>{3dcdb28f-9775-4a0a-ab16-d2bf9d11e3fb}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Program.py</StartupFile>
+    <StartupFile>__Main__.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Program.py" />
+    <Compile Include="BlockManager.py" />
+    <Compile Include="BoolWrapper.py" />
+    <Compile Include="DeltaTimeCounter.py" />
+    <Compile Include="Enemy.py" />
+    <Compile Include="Enemy1.py" />
+    <Compile Include="Entity.py" />
+    <Compile Include="GraphicBase.py" />
+    <Compile Include="__Main__.py" />
+    <Compile Include="LvLManager.py" />
+    <Compile Include="Player.py" />
+    <Compile Include="Position.py" />
+    <Compile Include="PlatformerGame.py" />
+    <Compile Include="Projectile.py" />
+    <Compile Include="Text.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
