@@ -62,17 +62,17 @@ class PlatformerGame:
         # set the mapp
         self._LvLManager.Initzialize()
 
-    def GameLoop(self):
+    def GameLoop(self): # 0.82 ms
         self.Initzialize()
         delta_frame_counter = DeltaTimeCounter()
 
         while self.running.state:
-            #self.Render(); # depricated # 7.9 ms
-            self.OptimizedRender() # 4.3 ms
-            self.Update() # 0.7 ms
+            self.Render(); # depricated # 7.9 ms
+            #self.OptimizedRender() # 0.72 ms
+            #self.Update() # 0.16 ms
             delta_frame_counter.Count()
             delta_frame_counter.Display(1, 1, "Frame") # change the second number to 17 if trying the depricated update
-            time.sleep(0.05) # 0.2 ms
+            #time.sleep(0.05) # 0.06 ms
 
     def Update(self):
         self._LvLManager.Update()
