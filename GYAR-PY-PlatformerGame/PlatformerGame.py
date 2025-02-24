@@ -67,12 +67,13 @@ class PlatformerGame:
         delta_frame_counter = DeltaTimeCounter()
 
         while self.running.state:
-            self.Render(); # depricated # 7.9 ms
-            #self.OptimizedRender() # 0.72 ms
-            #self.Update() # 0.16 ms
-            delta_frame_counter.Count()
-            delta_frame_counter.Display(1, 1, "Frame") # change the second number to 17 if trying the depricated update
-            #time.sleep(0.05) # 0.06 ms
+            #self.Render(); # depricated # 7.9 ms
+            self.OptimizedRender() # 0.72 ms
+            self.Update() # 0.16 ms
+
+            delta_frame_counter.CountAndDisplay(1, 1, "Frame") # replaces count and display while taking the benchmarking time out of the calculation
+            #delta_frame_counter.Count(), delta_frame_counter.Display(1, 1, "Frame") # change the second number to 17 if trying the depricated update
+            time.sleep(0.05) # 0.06 ms
 
     def Update(self):
         self._LvLManager.Update()
